@@ -109,7 +109,7 @@ export default {
   data() {
     return {
       songReady: false,
-      zeroUrl: 'https://music.gsanweb.cn/z.mp3',
+      zeroUrl: 'https://tieba.gsanweb.cn/z.mp3',
       currentTime: 0,
       currentLyric: null,
       currentLineNum: 0,
@@ -236,6 +236,9 @@ export default {
         this.loop();
       } else {
         this.next();
+      }
+      if (this.currentLyric) {
+        this.currentLyric.seek(0);
       }
     },
     loop() {
