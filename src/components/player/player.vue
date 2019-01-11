@@ -83,7 +83,7 @@
       </div>
     </transition>
     <playlist ref="playlist"></playlist>
-    <audio :src="currentSong.url || zeroUrl" ref="audio" @canplaythrough="play" @error="error" @timeupdate="updateTime" @ended="end" controls v-show="!isAlert"></audio>
+    <audio :src="currentSong.url || zeroUrl" ref="audio" @canplaythrough="play" @error="error" @timeupdate="updateTime" @ended="end" v-show="!isAlert"></audio>
     <confirm :isAlert="isAlert" ref="alert">抱歉！播放错误<br>{{errorText}}</confirm>
   </div>
 </template>
